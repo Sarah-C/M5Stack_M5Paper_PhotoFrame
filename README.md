@@ -33,6 +33,8 @@ The difference when using a **dithered** image viewer:
          
 Here's the dithered verisons -        
            
+![20210819_094344](https://user-images.githubusercontent.com/1586332/130038142-1dad8b62-3d64-4a0a-bab9-514a60af25c2.jpg)             
+
 ![20210819_081845](https://user-images.githubusercontent.com/1586332/130035486-fa2e13ce-0954-46ec-9f05-3cc708a0be89.jpg)            
             
 ![20210819_081826](https://user-images.githubusercontent.com/1586332/130035501-c15486f1-0b2a-4841-8129-4ec7ead69391.jpg)       

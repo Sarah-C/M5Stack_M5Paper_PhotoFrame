@@ -35,8 +35,12 @@ Here's the wonderful quality of the dithered verisons this program uses -
            
 ![20210819_094344](https://user-images.githubusercontent.com/1586332/130038142-1dad8b62-3d64-4a0a-bab9-514a60af25c2.jpg)             
 
+See how well a WORST CASE bad banding image is shown? You can't see the bands at all:             
+
 ![20210819_081845](https://user-images.githubusercontent.com/1586332/130035486-fa2e13ce-0954-46ec-9f05-3cc708a0be89.jpg)            
             
+Here's another worst-case example of banding being really well drawn by the ditherer, rooming all the banding:                
+
 ![20210819_081826](https://user-images.githubusercontent.com/1586332/130035501-c15486f1-0b2a-4841-8129-4ec7ead69391.jpg)       
 
        

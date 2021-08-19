@@ -28,7 +28,7 @@ Thanks to wizche for the photo-viewer:
               
          
               
-** ### IMPORTANT when building your own copy ###**             
+**### IMPORTANT when building your own copy ###**             
 In your documents folder, after you've downloaded the library JPEGDEC,             
 open the file : Documents\Arduino\libraries\JPEGDEC\src\JPEGDEC.h                 
 Change line 49, to read:            

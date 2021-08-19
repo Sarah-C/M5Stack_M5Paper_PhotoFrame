@@ -45,5 +45,7 @@ Note the terrible banding that's obvious on the gently brightening skies in the 
           
 ![20210819_081528](https://user-images.githubusercontent.com/1586332/130035520-a7000128-d04a-40ee-906b-3a426f5204e2.jpg)           
            
+These examples are showing how bad the banding is when images are drawn to E-ink panels without dithering the pixels...
+
 ![20210819_081542](https://user-images.githubusercontent.com/1586332/130035533-4de85768-bf3b-4ed9-ad6a-7306b4f1bb41.jpg)          
      

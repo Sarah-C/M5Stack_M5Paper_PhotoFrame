@@ -1,4 +1,4 @@
-# M5Stack_M5Paper_PhotoFrame              
+# M5Stack M5Paper: Photo viewer
 This is a dithered photo viewer for the M5Stack M5Paper device.                      
 It's capable of drawing 960x540 resolution pictures in 16 shades of grey.            
 

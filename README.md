@@ -4,12 +4,14 @@ It's capable of drawing 960x540 resolution pictures in 16 shades of grey.
 
 Until now I've not found a photo-viewer program for it that also dither's away the banding that happens when gentle gradients are shown. So I decided to find the best program and libraries I could find and combine them into the currently best M5Paper photo viewer available!
 
+**Where to put your images**
 You need to put your collection of images in the root of an SD card for the M5Paper.        
 
 **Now with some scaling/centering.**         
 Small images are centered but NOT enlarged, and images larger than 960x540 will be shrunk by a half/ a quarter / or an eigth - whichever is first to fit the screen. 
 So for best results it's best to get a collection of 960 x 540 images to fill the entire screen.                       
 
+**Controls**
 The toggle wheel on the M5Paper can control the program:         
 Toggle left (anticlockwise) : Previous image.             
 Toggle right (clockwise)    : Next image. (Next image happens naturally every 2 minutes)             
@@ -26,7 +28,7 @@ Thanks to wizche for the photo-viewer:
               
          
               
-IMPORTANT!             
+**IMPORTANT!**             
 In your documents folder, after you've downloaded the library JPEGDEC,             
 open the file : Documents\Arduino\libraries\JPEGDEC\src\JPEGDEC.h                 
 Change line 49, to read:            

@@ -8,6 +8,7 @@ The toggle wheel on the M5Paper can control the program:
 Toggle left (anticlockwise) : Previous image.
 Toggle right (clockwise)    : Next image. (Next image happens naturally every 2 minutes)
 Press the toggle in         : Turn the M5Paper off / on. (When turning off, the file text changes from "-blah- .jpg" to "-blah- .Off", it's subtle!
+Note: The M5Paper DOES NOT turn off when it's plugged into the USB socket! So you'll get it to say ".Off".. but it'll carry on anyway. You need to unplug it first before turning off.
 
 There's an images folder included for you to privately test the program - please don't use them for anything more! Their copyrights are respectively their owners.
 

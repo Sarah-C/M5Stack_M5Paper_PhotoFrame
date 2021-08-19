@@ -20,15 +20,16 @@ If you don't - many pictures will end up with horizontal lines on them due to th
 
 The difference when using a **dithered** image viewer:
 
-These two images are using a standard jpeg decoder - that doesn't dither pixels.
-![20210819_081528](https://user-images.githubusercontent.com/1586332/130035122-2909c1e6-0eb7-444d-9f9f-e5629662ae6b.jpg)
-
-![20210819_081542](https://user-images.githubusercontent.com/1586332/130035139-02f36a2e-da2e-4cff-9113-6c4038fc2ea2.jpg)
-
-
 Here's the dithered verisons - 
 
-![20210819_081528](https://user-images.githubusercontent.com/1586332/130035277-de07fb54-a117-44fa-94c3-5f31b8104e71.jpg)
+![20210819_081845](https://user-images.githubusercontent.com/1586332/130035486-fa2e13ce-0954-46ec-9f05-3cc708a0be89.jpg)
 
-![20210819_081826](https://user-images.githubusercontent.com/1586332/130035312-7e855e04-ea1b-438b-9f00-7ac5d7603738.jpg)
+![20210819_081826](https://user-images.githubusercontent.com/1586332/130035501-c15486f1-0b2a-4841-8129-4ec7ead69391.jpg)
+
+
+These two images are using a standard jpeg decoder - that **doesn't** dither pixels.
+
+![20210819_081528](https://user-images.githubusercontent.com/1586332/130035520-a7000128-d04a-40ee-906b-3a426f5204e2.jpg)
+
+![20210819_081542](https://user-images.githubusercontent.com/1586332/130035533-4de85768-bf3b-4ed9-ad6a-7306b4f1bb41.jpg)
 

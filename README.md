@@ -40,7 +40,8 @@ Here's the dithered verisons -
 ![20210819_081826](https://user-images.githubusercontent.com/1586332/130035501-c15486f1-0b2a-4841-8129-4ec7ead69391.jpg)       
 
        
-These two images are using a standard jpeg decoder - that **doesn't** dither pixels.           
+These two images are using a standard jpeg decoder - that **doesn't** dither pixels. 
+Note the terrible banding that's obvious on the gently brightening skies in the background?
           
 ![20210819_081528](https://user-images.githubusercontent.com/1586332/130035520-a7000128-d04a-40ee-906b-3a426f5204e2.jpg)           
            

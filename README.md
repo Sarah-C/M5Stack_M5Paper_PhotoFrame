@@ -31,7 +31,7 @@ If you don't - many pictures will end up with horizontal lines on them due to th
           
 The difference when using a **dithered** image viewer:          
          
-Here's the dithered verisons -        
+Here's the wonderful quality of the dithered verisons this program uses -        
            
 ![20210819_094344](https://user-images.githubusercontent.com/1586332/130038142-1dad8b62-3d64-4a0a-bab9-514a60af25c2.jpg)             
 

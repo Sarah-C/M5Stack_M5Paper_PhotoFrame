@@ -4,6 +4,11 @@ You need to put your collection of images in the root of an SD card for the M5Pa
 Right now small images aren't centered, so it's best to get a collection of 960 x 540 images to fill the screen.            
 Bigger than that won't be scaled, so be sure to scale your photos!            
 
+The toggle wheel on the M5Paper can control the program:
+Toggle left (anticlockwise) : Previous image.
+Toggle right (clockwise)    : Next image. (Next image happens naturally every 2 minutes)
+Press the toggle in         : Turn the M5Paper off / on. (When turning off, the file text changes from "-blah- .jpg" to "-blah- .Off", it's subtle!
+
 There's an images folder included for you to privately test the program - please don't use them for anything more! Their copyrights are respectively their owners.
 
 Thanks to wizche for the photo-viewer:

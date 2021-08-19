@@ -15,13 +15,14 @@ Press the toggle in         : Turn the M5Paper off / on. (When turning off, the 
 Note: The M5Paper DOES NOT turn off when it's plugged into the USB socket! So you'll get it to say ".Off".. but it'll carry on anyway. You need to unplug it first before turning off.          
            
 There's an images folder included for you to privately test the program - please don't use them for anything more! Their copyrights are respectively their owners.             
-               
+     
+Thanks to bitbank2 for the really fast and dithered JPEG output:            
+  https://github.com/bitbank2/JPEGDEC            
+  
 Thanks to wizche for the photo-viewer:               
   https://github.com/wizche/flip-pics           
               
-Thanks to bitbank2 for the really fast and dithered JPEG output:            
-  https://github.com/bitbank2/JPEGDEC            
-           
+         
               
 IMPORTANT!             
 In your documents folder, after you've downloaded the library JPEGDEC,             

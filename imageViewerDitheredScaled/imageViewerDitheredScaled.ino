@@ -214,10 +214,11 @@ void drawImage(char *fileName) {
 
   uint8_t result = jpeg.open(fileName, myOpen, myClose, myRead, mySeek, JPEGDraw);
   if (result != 1) {
-    switch (result) {
-      case 0: Serial.println("Error: progressive JPG not supported"); break;
+    uint8_t err = jpeg.getLastError();
+    switch (err) {
+      case 1: Serial.println("Error: JPEG_INVALID_PARAMETER"); break; //progressive JPG not supported"); break;
       case 2: Serial.println("Error: JPEG_DECODE_ERROR"); break;
-      case 3: Serial.println("Error: JPEG_UNSUPPORTED_FEATURE"); break;
+      case 3: Serial.println("Error: JPEG_UNSUPPORTED_FEATURE (progressive JPG's not supported)"); break;
       case 4: Serial.println("Error: JPEG_INVALID_FILE"); break;
     }
     waitingTime = 1;

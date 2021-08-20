@@ -31,17 +31,20 @@
 #include <JPEGDEC.h>
 
 #define SLEEP_HOURS 1
-#define WaitingTimeStart 1000
-bool dither = true;
+#define _WaitingTimeStart 1000
+
+// _BackgroundBrightness fills the border on small images: 0: White... 15: black
+#define _BackgroundBrightness 0
 
 JPEGDEC jpeg;
 
 M5EPD_Canvas canvas(&M5.EPD);
 
+bool dither = true;
 const char *DATA_FILE = "/data.txt";
 uint32_t lastCount;
 uint8_t ditherSpace[15360];
-uint16_t waitingTimeStart = 1000;
+//uint16_t _WaitingTimeStart = 1000;
 uint16_t waitingTime = 1000;
 int offsetX = 0; // Screen space centering.
 int offsetY = 0; // Screen space centering.
@@ -208,12 +211,25 @@ void loadNextImage() {
 }
 
 void drawImage(char *fileName) {
-  jpeg.open(fileName, myOpen, myClose, myRead, mySeek, JPEGDraw);
+
+  uint8_t result = jpeg.open(fileName, myOpen, myClose, myRead, mySeek, JPEGDraw);
+  if (result != 1) {
+    switch (result) {
+      case 0: Serial.println("Error: progressive JPG not supported"); break;
+      case 2: Serial.println("Error: JPEG_DECODE_ERROR"); break;
+      case 3: Serial.println("Error: JPEG_UNSUPPORTED_FEATURE"); break;
+      case 4: Serial.println("Error: JPEG_INVALID_FILE"); break;
+    }
+    waitingTime = 1;
+    return;
+  }
+
   int width = jpeg.getWidth();
   int height = jpeg.getHeight();
 
-  Serial.println("Image size:");
-  Serial.println(width);
+  Serial.print("Image size: ");
+  Serial.print(width);
+  Serial.print(" x ");
   Serial.println(height);
 
   // Too big? Then scale.
@@ -232,8 +248,9 @@ void drawImage(char *fileName) {
     // Try half size.
     width >>= 1;
     height >>= 1;
-    Serial.println("Trying half size:");
-    Serial.println(width);
+    Serial.print("Trying half size: ");
+    Serial.print(width);
+    Serial.print(" x ");
     Serial.println(height);
     scaling = JPEG_SCALE_HALF;
     if (width > 960 || height > 540) {
@@ -241,16 +258,18 @@ void drawImage(char *fileName) {
       width >>= 1;
       height >>= 1;
       scaling = JPEG_SCALE_QUARTER;
-      Serial.println("Trying quarter size:");
-      Serial.println(width);
+      Serial.print("Trying quarter size: ");
+      Serial.print(width);
+      Serial.print(" x ");
       Serial.println(height);
       if (width > 960 || height > 540) {
         // Try eigth size.
         width >>= 1;
         height >>= 1;
         scaling = JPEG_SCALE_EIGHTH;
-        Serial.println("Trying eighth size:");
-        Serial.println(width);
+        Serial.println("Trying eighth size: ");
+        Serial.print(width);
+        Serial.print(" x ");
         Serial.println(height);
         if (width > 960 || height > 540) {
           Serial.println("Still too big after scaling attempt, skipping.");
@@ -260,9 +279,10 @@ void drawImage(char *fileName) {
         } // Too big.
       } // Eighth size.
     } // Quarter size.
+    Serial.println("Resized image now fits.");
   } // Half size.
   // For when this image is smaller than the last - make sure no old image can be seen on the boundaries.
-  canvas.fillCanvas(15);
+  canvas.fillCanvas(_BackgroundBrightness);
   offsetX = (960 - width) >> 1;
   offsetY = (540 - height) >> 1;
   jpeg.setPixelType(FOUR_BIT_DITHERED);
@@ -271,7 +291,7 @@ void drawImage(char *fileName) {
   canvas.drawRightString(fileName, 960, 540, 1);
   drawTempHumidityBattery();
   canvas.pushCanvas(0, 0, UPDATE_MODE_GC16);
-  waitingTime = WaitingTimeStart;
+  waitingTime = _WaitingTimeStart;
 }
 
 void setup() {
@@ -282,7 +302,7 @@ void setup() {
   canvas.createCanvas(960, 540);
   canvas.setTextSize(2);
   loadNextImage();
-  waitingTime = WaitingTimeStart;
+  waitingTime = _WaitingTimeStart;
 }
 
 void loop() {
